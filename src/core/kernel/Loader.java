@@ -25,7 +25,7 @@ public class Loader {
 	
 	private static Loader instance = null;
 	
-	public static Loader getInstanec() {
+	public static Loader getInstance() {
 		if(instance == null)
 			instance = new Loader();
 		return instance;

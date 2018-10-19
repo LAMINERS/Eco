@@ -1,8 +1,8 @@
 package core.model;
 
 import core.kernel.Loader;
-import core.texturing.OBJLoader;
 import core.texturing.Texture2D;
+import core.util.OBJLoader;
 
 public class Model {
 
@@ -15,8 +15,8 @@ public class Model {
 	}
 	
 	public Model(String meshFile, String texturePath, String textureFile) {
-		mesh = OBJLoader.loadObj(meshFile, Loader.getInstanec());
-		texture = new Texture2D(texturePath, textureFile, Loader.getInstanec());
+		mesh = OBJLoader.loadObj(meshFile, Loader.getInstance());
+		texture = new Texture2D(texturePath, textureFile, Loader.getInstance());
 	}
 
 	public Mesh getMesh() {

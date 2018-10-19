@@ -16,7 +16,7 @@ public class CoreEngine {
 		window = Window.getInstance();
 		window.createWindow(1280, 720);
 		
-		loader = new Loader();
+		loader = Loader.getInstance();
 
 		renderEngine = RenderingEngine.getInstance();
 	}
@@ -38,6 +38,10 @@ public class CoreEngine {
 		
 		loader.cleanUp();
 		window.close();
+	}
+	
+	public RenderingEngine getRenderingEngine() {
+		return renderEngine;
 	}
 	
 	private void getDeviceProperties() {

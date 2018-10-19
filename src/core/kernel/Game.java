@@ -1,5 +1,10 @@
 package core.kernel;
 
+/**
+ * Game implementation
+ * @author Lars Bücker
+ * @version 1.0
+ */
 public class Game {
 
 	CoreEngine engine;

@@ -3,8 +3,8 @@ package core.kernel;
 import java.util.ArrayList;
 import java.util.List;
 
-import core.model.Model;
 import core.renderer.Renderer;
+import core.scene.Entity;
 import core.shaders.StaticShader;
 
 public class RenderingEngine {
@@ -17,7 +17,11 @@ public class RenderingEngine {
 		return instance;
 	}
 
-	private List<Model> models = new ArrayList<Model>();
+	private static List<Entity> entities = new ArrayList<Entity>();
+	
+	public static void addEntity(Entity entity) {
+		entities.add(entity);
+	}
 	
 	//TODO Add new Renderers to the Engine
 	Renderer renderer; 
@@ -35,8 +39,8 @@ public class RenderingEngine {
 	public void render() {
 		// Render all Static Objects
 		staticShader.start();
-		for(Model model : models) {
-			renderer.render(model);
+		for(Entity entity : entities) {
+			renderer.render(entity, staticShader);
 		}
 		staticShader.stop();
 	}

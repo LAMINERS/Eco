@@ -1,4 +1,4 @@
-package core.texturing;
+package core.util;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,6 +12,7 @@ import core.kernel.Loader;
 import core.math.Vec2f;
 import core.math.Vec3f;
 import core.model.Mesh;
+import core.texturing.Vertex;
 
 public class OBJLoader {
 

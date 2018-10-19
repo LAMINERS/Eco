@@ -3,6 +3,7 @@ package core.scene;
 import java.util.HashMap;
 
 import core.math.Transform;
+import core.math.Vec3f;
 
 public class Actor {
 
@@ -45,5 +46,11 @@ public class Actor {
 
 	public void setTransform(Transform transform) {
 		this.transform = transform;
+	}
+	
+	public void setTransform(Vec3f location, Vec3f rotation, Vec3f scale) {
+		this.transform.setTranslation(location);
+		this.transform.setRotation(rotation);
+		this.transform.setScaling(scale);
 	}
 }
